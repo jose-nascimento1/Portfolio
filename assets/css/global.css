@@ -4,13 +4,13 @@
 }
 
 @font-face {
-    font-family: 'Neue Machina';
-    src: url('../fonts/neue-machina-regular.otf');
+    font-family: 'Neue Machina' ;
+    src: url('/assets/fonts/neue-machina-regular.eot');
 }
 
 body {
-    background-color: #000;
-    color: #fff;
+    background-color: black;
+    color: aliceblue;
 }
 
 a {
@@ -22,46 +22,45 @@ a:hover {
     text-decoration: underline;
 }
 
-.main {
+main {
     margin: 1rem;
     padding: 1rem;
-    border: 1px solid #fff;
+    border: 1px solid #ffff;
     border-radius: 1rem;
 }
 
-.main::before,
-.main::after {
+main::before {
     content: '';
-    background-image: url('../img/background.svg');
+    background-image: url(/assets/img/background.svg);
     background-repeat: no-repeat;
     background-size: contain;
     display: inline-block;
-    position: fixed;
-    top: 0;
-    left: 0;
     width: 140vw;
     height: 100vh;
+    top: 0;
+    left: 0;
+    position: fixed;
     z-index: -1;
 }
 
-.main::after {
+main::after {
     content: '';
-    top: auto;
-    left: auto;
+    background-image: url(/assets/img/background.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: inline-block;
+    width: 140vw;
+    height: 100vh;
     bottom: 0;
     right: 0;
+    position: fixed;
+    z-index: -1;
     transform: rotate(180deg);
 }
-
 
 @media only screen and (min-width: 768px) {
     .main {
         max-width: 1024px;
         margin: 1rem auto;
-    }
-
-    .main::before,
-    .main::after {
-        width: 70vw;
     }
 }

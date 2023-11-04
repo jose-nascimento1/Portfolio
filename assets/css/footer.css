@@ -8,5 +8,9 @@ footer {
 }
 
 footer img {
-    max-width: 100px;
+    width: 60px;
+}
+
+footer a {
+    margin-left: 1rem;
 }

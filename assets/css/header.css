@@ -1,27 +1,13 @@
-.header {
+.header{
     display: flex;
     flex-direction: column;
     align-items: center;
     position: relative;
 }
 
-.header::after {
-    content: '';
-    display: inline-block;
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    width: 2rem;
-    height: 2rem;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-image: url('../img/icons/header.svg');
-}
-
-.header .photo {
+.header .profile {
     width: 200px;
     height: 200px;
-    border-radius: 50%;
 }
 
 .header .title {
@@ -55,42 +41,58 @@
 }
 
 .information .job::before {
-    background-image: url('../img/icons/job.svg');
+    background-image: url('/assets/img/icons/job.svg');
 }
 
 .information .location::before {
-    background-image: url('../img/icons/location.svg');
+    background-image: url('/assets/img/icons/location.svg');
 }
 
 .information .email::before {
-    background-image: url('../img/icons/email.svg');
+    background-image: url('/assets/img/icons/email.svg');
 }
 
 .information .phone::before {
-    background-image: url('../img/icons/phone.svg');
+    background-image: url('/assets/img/icons/phone.svg');
 }
 
 @media only screen and (min-width: 768px) {
-    .header {
-        display: grid;
-        grid-template-areas:
-            "photo title"
-            "photo information"
-        ;
+    .header{
+    display: grid;
+    grid-template-areas: 
+    "profile title"
+    "profile information";
+    }    
+
+    .header .profile{
+    grid-area: profile;
+    margin: 0 auto;
     }
 
-    .header .photo {
-        grid-area: photo;
-        margin: 0 auto;
-    }
-
-    .header .title {
+    .header .title{
         grid-area: title;
         text-align: start;
-        max-width: 210px;
+        max-width: 200px;
     }
 
-    .header .information {
+    .header .information{
         grid-area: information;
+    }
+
+    .header::after {
+        content: '';
+        width: 100px;
+        height: 100px;
+        display: inline-block;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        width: 2rem;
+        height: 2rem;
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 100px;
+        height: 100px;
+    /*    background-image: url(/assets/img/header.png);*/
     }
 }
