@@ -1,7 +1,7 @@
 # Projeto Portfólio
 Neste projeto fui desafiado a construir um portfólio. Para isso foi usado HTML5 com tags semanticas, CSS3 e JavaScript com variavéis, funções e estruturas de decisão.
 
-🔗 [Clique aqui pra acessar o projeto](https://portfolio-jsdeveloper.web.app)
+🔗 [Clique aqui pra acessar o projeto](https://jose-nascimento1.web.app)
 
 ![image](./assets/screenshots/1.png)
 ![image](./assets/screenshots/2.png)
